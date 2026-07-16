@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light" />
+    <title>Météo · Saint-Germain-en-Laye</title>
+    <meta name="description" content="Widget météo minimaliste pour Saint-Germain-en-Laye." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="widget" aria-label="Météo à Saint-Germain-en-Laye">
+      <section class="weather-card">
+        <div class="current-weather">
+          <button class="current-main" id="refreshButton" type="button" aria-label="Actualiser la météo">
+            <div class="weather-icon weather-icon-large" id="currentIcon" data-weather="cloudy" aria-hidden="true">
+              <span class="icon-part icon-sun"></span><span class="icon-part icon-moon"></span>
+              <span class="icon-part icon-cloud"></span>
+              <span class="icon-part icon-rain icon-rain-one"></span><span class="icon-part icon-rain icon-rain-two"></span><span class="icon-part icon-rain icon-rain-three"></span>
+              <span class="icon-part icon-snow icon-snow-one"></span><span class="icon-part icon-snow icon-snow-two"></span><span class="icon-part icon-snow icon-snow-three"></span>
+              <span class="icon-part icon-lightning"></span>
+              <span class="icon-part icon-fog icon-fog-one"></span><span class="icon-part icon-fog icon-fog-two"></span>
+            </div>
+            <span class="temperature" id="temperature">--°</span>
+          </button>
+
+          <div class="current-copy">
+            <p class="condition" id="condition">Chargement</p>
+            <h1 class="location">Saint-Germain-en-Laye</h1>
+            <p class="details" id="details">Ressenti --° · Humidité --%</p>
+          </div>
+        </div>
+
+        <div class="forecast" id="forecast" aria-label="Prévisions heure par heure"></div>
+
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
